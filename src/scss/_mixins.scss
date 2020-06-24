@@ -20,25 +20,27 @@
     font-weight: 400;
 }
 
-@mixin subtitle {
+@mixin subtitle-large {
     @include roboto;
     font-size: 28px;
     font-weight: 400;
 }
-@mixin subtitle-small {
+@mixin subtitle {
     @include roboto;
     font-size: 22px;
     font-weight: 400;
+    line-height: 1.364;
 }
 
-@mixin title {
+@mixin title-large {
     @include roboto;
     font-size: 48px;
     font-weight: 700;
 }
 
-@mixin line-block {
-    background-color: $primary-color;
-    width: 50px;
-    height: 2px;
+@mixin title {
+    @include roboto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.389;
 }

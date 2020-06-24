@@ -59,22 +59,10 @@
             margin-left: 150px;
         }
         &__subtitle {
-            @include subtitle;
-            color: $title-color;
-            position: relative;
-            padding-left: 60px;
-
-            &::before {
-                content: '';
-                @include line-block;
-                display: inline-block;
-                position: absolute;
-                left: 0;
-                top: 50%;
-            }
+            @include subtitle-large;
         }
         &__title {
-            @include title;
+            @include title-large;
             color: $title-color;
             margin: 30px 0;
 
@@ -84,7 +72,7 @@
             }
         }
         &__info {
-            @include subtitle-small;
+            @include subtitle-large;
             color: $title-color;
             margin-bottom: 30px;
         }
@@ -94,10 +82,30 @@
             }
         }
         &__list {
+            display: flex;
+            margin-top: 40px;
             &-item {
+                margin-right: 25px;
             }
         }
         &-icon {
+            display: block;
+            height: 40px;
+            width: 40px;
+
+            svg {
+                path {
+                    transition: $transition-time;
+                    fill: $title-color;
+                }
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: $primary-color;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,38 @@
+.skills {
+    background-color: $section-bg-color;
+    &-inner {
+        padding: 90px 0 90px;
+    }
+
+    &__title-1 {
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    &__title-2 {
+        margin-bottom: 40px;
+    }
+    &__list {
+        max-width: 600px;
+        &-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+
+            &-img {
+                height: 60px;
+                width: 70px;
+                margin-right: 20px;
+            }
+
+            img {
+                height: 100%;
+                margin: 0 auto;
+                display: block;
+            }
+
+            span {
+                @include subtitle;
+            }
+        }
+    }
+}

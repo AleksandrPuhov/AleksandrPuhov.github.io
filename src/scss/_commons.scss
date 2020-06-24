@@ -1,0 +1,70 @@
+.subtitle {
+    @include subtitle;
+    color: $title-color;
+    position: relative;
+    padding-left: 60px;
+
+    &::before {
+        content: '';
+        background-color: $primary-color;
+        width: 50px;
+        height: 2px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+}
+
+.title {
+    @include title;
+    color: $title-color;
+    span {
+        display: inline-block;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 10px;
+            width: 100%;
+            bottom: 5px;
+            left: 0;
+            background-color: $primary-color-opacity;
+        }
+    }
+}
+
+.text {
+    @include text-main;
+    color: $text-color;
+}
+
+.btn {
+    &-primary,
+    &-secondary {
+        width: 200px;
+        display: inline-block;
+        text-decoration: none;
+        @include text-main-roboto;
+        text-align: center;
+        padding: 10px 20px;
+        color: $text-secondary-color;
+        transition: $transition-time;
+    }
+    &-primary {
+        background-color: $primary-color;
+        border: 2px solid $primary-color;
+        &:hover {
+            background-color: transparent;
+            color: $primary-color;
+        }
+    }
+    &-secondary {
+        background-color: $title-color;
+        border: 2px solid $title-color;
+        &:hover {
+            background-color: transparent;
+            color: $title-color;
+        }
+    }
+}
