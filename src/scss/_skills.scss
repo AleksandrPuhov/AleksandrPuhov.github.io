@@ -12,11 +12,16 @@
         margin-bottom: 40px;
     }
     &__list {
-        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        flex-wrap: wrap;
+
         &-item {
             display: flex;
             align-items: center;
             margin: 20px 0;
+            width: 250px;
 
             &-img {
                 height: 60px;

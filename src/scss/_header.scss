@@ -3,7 +3,6 @@
     background: url(../img/header-bg.jpg) no-repeat 50% 50%;
     background-size: cover;
     position: relative;
-    z-index: 1;
 
     &::before {
         content: '';
@@ -20,6 +19,7 @@
         position: fixed;
         z-index: 20;
         width: 100%;
+        transition: $transition-time;
 
         &-inner {
             display: flex;
@@ -44,6 +44,48 @@
                 border-bottom: 3px solid $primary-color;
             }
         }
+
+        &-burger {
+            display: none;
+        }
+
+        // &-burger {
+        //     display: block;
+        //     height: 20px;
+        //     width: 30px;
+        //     cursor: pointer;
+        //     position: relative;
+        //     z-index: 11;
+
+        //     &::before,
+        //     &::after,
+        //     span {
+        //         display: block;
+        //         content: '';
+        //         background-color: $title-color;
+        //         position: absolute;
+        //         width: 100%;
+        //         height: 2px;
+        //         left: 0;
+        //         transition: $transition-time;
+        //     }
+        //     &::before {
+        //         top: 0;
+        //     }
+        //     &::after {
+        //         bottom: 0;
+        //     }
+        //     span {
+        //         top: 9px;
+        //     }
+        //     &:hover {
+        //         &::before,
+        //         &::after,
+        //         span {
+        //             background-color: $primary-color;
+        //         }
+        //     }
+        // }
     }
     &-content {
         position: relative;
