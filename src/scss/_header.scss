@@ -123,30 +123,13 @@
                 margin-left: 30px;
             }
         }
-        &__list {
-            display: flex;
+
+        &__social {
             margin-top: 40px;
             &-item {
                 margin-right: 25px;
-            }
-        }
-        &-icon {
-            display: block;
-            height: 40px;
-            width: 40px;
-
-            svg {
-                path {
-                    transition: $transition-time;
-                    fill: $title-color;
-                }
-            }
-            &:hover {
-                svg {
-                    path {
-                        fill: $primary-color;
-                    }
-                }
+                height: 40px;
+                width: 40px;
             }
         }
     }

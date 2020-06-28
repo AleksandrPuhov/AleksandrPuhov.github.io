@@ -11,7 +11,12 @@
     }
 
     &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
         &-items {
+            padding: 10px 10px;
+            flex-basis: 33.33%;
         }
     }
 
@@ -19,18 +24,15 @@
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        min-width: 320px;
-        max-width: 480px;
-        max-height: 360px;
+        width: 100%;
         text-align: center;
-        background-color: $works-card-bg-color;
         box-shadow: -1px 1px 15px -5px $title-color;
 
         &__img {
-            height: 390px;
-            opacity: 1;
-            transform: translate3d(0, -30px, 0);
-            transition: opacity 0.35s, transform 0.35s;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            vertical-align: bottom;
         }
 
         &__caption {
@@ -40,7 +42,15 @@
             bottom: 0;
             right: 0;
             color: $text-secondary-color;
-            padding: 60px 70px;
+            padding: 50px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            z-index: 1;
+            background-color: transparent;
+            transition: 0.35s;
 
             &::after,
             &::before {
@@ -51,20 +61,20 @@
                 transition: opacity 0.35s, transform 0.35s;
             }
             &::after {
-                top: 30px;
-                right: 50px;
-                bottom: 30px;
-                left: 50px;
+                top: 20px;
+                right: 40px;
+                bottom: 20px;
+                left: 40px;
                 border-right: 1px solid $text-secondary-color;
                 border-left: 1px solid $text-secondary-color;
                 transform: scale(1, 0);
                 transform-origin: 100% 0;
             }
             &::before {
-                top: 50px;
-                right: 30px;
-                bottom: 50px;
-                left: 30px;
+                top: 40px;
+                right: 20px;
+                bottom: 40px;
+                left: 20px;
                 border-top: 1px solid $text-secondary-color;
                 border-bottom: 1px solid $text-secondary-color;
                 transform: scale(0, 1);
@@ -72,31 +82,27 @@
             }
 
             &-title {
-                padding-top: 5%;
                 @include text-main-roboto;
                 font-size: 24px;
                 opacity: 0;
-                transition: opacity 0.5s, transform 0.35s;
+                transition: opacity 0.35s, transform 0.35s;
                 transform: translate3d(0, -30px, 0);
             }
             &-text {
                 @include text-main;
                 opacity: 0;
-                margin-top: 15px;
+                margin-top: 10px;
                 transform: translate3d(0, 20px, 0);
-                transition: opacity 0.5s, transform 0.4s;
+                transition: opacity 0.35s, transform 0.4s;
             }
             &-icons {
                 display: flex;
-                justify-content: space-between;
-                max-width: 130px;
-                margin: 20px auto 0;
-
                 opacity: 0;
                 transform: translate3d(0, 20px, 0);
-                transition: opacity 0.5s, transform 0.4s;
+                transition: opacity 0.35s, transform 0.4s;
 
                 &-item {
+                    margin: 15px 15px 0 15px;
                     height: 50px;
                     width: 50px;
                 }
@@ -118,13 +124,9 @@
             }
         }
 
-        &:hover &__img {
-            opacity: 0.3;
-            transform: translate3d(0, 0, 0);
-            transition-delay: 0.15s;
-        }
-
         &:hover &__caption {
+            background-color: $works-card-bg-color;
+
             &::after,
             &::before {
                 opacity: 1;
